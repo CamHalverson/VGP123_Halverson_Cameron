@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+   //public static Transform playerTransform;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator Anim;
@@ -19,47 +20,11 @@ public class PlayerController : MonoBehaviour
 
     Coroutine speedChange = null;
 
-   
-
-    public int lives
-    {
-        get => _lives;
-        set
-        {
-            //if (_lives < value) //Gained
-            //if (_lives > value) //Lost
-
-            _lives = value;
-
-            Debug.Log("Lives value has changed to " + _lives.ToString());
-
-            //if (_lives <= 0) // game over
-
-        }
-    }
-    private int _lives = 3;
-
-    public int score
-    {
-        get => _score;
-        set
-        {
-            //if (_lives < value) //Gained
-            //if (_lives > value) //Lost
-
-            _lives = value;
-
-            Debug.Log("Score value has changed to " + _score.ToString());
-
-            //if (_lives <= 0) // game over
-
-        }
-    }
-    private int _score = 0;
-
     // Start is called before the first frame update
     void Start()
     {
+        //playerTransform = transform;
+
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         Anim = GetComponent<Animator>();
@@ -146,5 +111,5 @@ public class PlayerController : MonoBehaviour
         speedChange = null;
     }
 
-
+   
 }

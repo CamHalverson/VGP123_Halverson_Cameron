@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - GroundCheck
+  - PlayerProjectile
+  - Enemy
+  - EnemyProjectile
+  - Barrier
   layers:
   - Default
   - TransparentFX

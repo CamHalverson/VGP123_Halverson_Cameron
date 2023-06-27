@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float lifetime;
+    public int damage;
     //This is meant to be modified by the object that is creating this projectile.
     //eg: the shoot class
     [HideInInspector]
@@ -14,6 +15,8 @@ public class Projectile : MonoBehaviour
     {
         if (lifetime <= 0) lifetime = 2.0f;
 
+        if (damage <= 0) damage = 1;
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
         Destroy(gameObject, lifetime);
     }
@@ -22,10 +25,17 @@ public class Projectile : MonoBehaviour
     {
         GameObject otherCollider = collision.gameObject;
 
-        if (otherCollider.name != "Player")
+
+        if (collision.gameObject.CompareTag("Enemy") && CompareTag("PlayerProjectile"))
         {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("Player") && CompareTag("EnemyProjectile"))
+        {
+            GameManager.Instance.Lives--;
+            Destroy(gameObject);
+        }
     }
 }

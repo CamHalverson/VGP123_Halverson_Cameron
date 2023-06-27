@@ -16,7 +16,6 @@ public class PickUps : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController myController = collision.gameObject.GetComponent<PlayerController>();
         //if (!myController) return;
 
         if (collision.gameObject.CompareTag("Player"))
@@ -25,6 +24,7 @@ public class PickUps : MonoBehaviour
 
             if (currentPickup == PickupType.speedBoost)
             {
+                PlayerController myController = collision.gameObject.GetComponent<PlayerController>();
                 myController.StartSpeedChange();
                 Destroy(gameObject);
                 return;
@@ -33,19 +33,19 @@ public class PickUps : MonoBehaviour
             if (currentPickup == PickupType.Life)
             {
                 //do something
-                myController.lives++;
+                GameManager.Instance.Lives++;
                 Destroy(gameObject);
                 return;
             }
 
 
 
-            //do something
-            myController.score++;
-            Destroy(gameObject);
+            
 
 
         }
     }
+
+
 
 }

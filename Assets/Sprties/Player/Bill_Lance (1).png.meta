@@ -1554,7 +1554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bill_Lance (1)_69
+      name: splash
       rect:
         serializedVersion: 2
         x: 25
@@ -1575,7 +1575,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bill_Lance (1)_70
+      name: Bill Swim 1
       rect:
         serializedVersion: 2
         x: 90
@@ -1596,7 +1596,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bill_Lance (1)_71
+      name: Bill Swim 2
       rect:
         serializedVersion: 2
         x: 155
@@ -1617,7 +1617,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bill_Lance (1)_72
+      name: Bill Swim Shoot 1
       rect:
         serializedVersion: 2
         x: 220
@@ -1638,7 +1638,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bill_Lance (1)_73
+      name: Bill Swim Shoot 2
       rect:
         serializedVersion: 2
         x: 285
@@ -13254,6 +13254,10 @@ TextureImporter:
       Bill RunGun 3: 1793001386
       Bill RunGun 4: 275126818
       Bill RunGun 5: 1397116175
+      Bill Swim 1: -1151505890
+      Bill Swim 2: 798471748
+      Bill Swim Shoot 1: 712974029
+      Bill Swim Shoot 2: -36332110
       Bill idle: 295721326
       Bill lying down: -1204555551
       Bill_Lance (1)_0: -1214276931
@@ -13829,11 +13833,6 @@ TextureImporter:
       Bill_Lance (1)_66: 1932271749
       Bill_Lance (1)_67: -154622541
       Bill_Lance (1)_68: -1147900818
-      Bill_Lance (1)_69: 750956683
-      Bill_Lance (1)_70: -1151505890
-      Bill_Lance (1)_71: 798471748
-      Bill_Lance (1)_72: 712974029
-      Bill_Lance (1)_73: -36332110
       Bill_Lance (1)_74: -1931887833
       Bill_Lance (1)_75: 1815906704
       Bill_Lance (1)_76: 376679231
@@ -13865,6 +13864,7 @@ TextureImporter:
       Machine: -860278220
       Pickup Holder: 1487361965
       Player Projectile: -192067388
+      splash: 750956683
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
